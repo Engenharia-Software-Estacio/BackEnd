@@ -140,3 +140,125 @@ Cada pasta tem um `README.md` explicando o que criar lá dentro.
 npm run dev    # Sobe o servidor com hot-reload
 npm start      # Sobe o servidor sem hot-reload
 ```
+
+# Trabalho em equipe com Git
+
+## Estratégia de branches
+
+Fluxo recomendado:
+
+main → produção  
+develop → integração das features  
+feature branches → desenvolvimento isolado
+
+### Regras
+
+### Main
+
+- sempre estável
+- apenas código pronto para produção
+- nunca fazer commit direto
+- merge apenas vindo da develop
+
+---
+
+### Develop
+
+- branch de integração
+- recebe PR das features
+- ambiente de validação
+- pode ser deploy de staging
+
+---
+
+### Padrão de nomes para branchs:
+
+feat/nome-da-feature <br>
+fix/nome-do-bug <br>
+refactor/nome-da-melhoria <br>
+chore/nome-da-tarefa <br>
+test/nome-do-teste <br>
+docs/nome-da-doc <br>
+
+exemplos:
+
+feat/create-user-form <br>
+feat/dashboard-metrics <br>
+fix/login-validation <br>
+refactor/api-pattern <br>
+chore/update-eslint <br>
+docs/project-architecture <br>
+
+OBS: 2 pessoas não devem trabalhar na mesma branch, não ao mesmo tempo pelo menos.
+
+---
+
+# Conventional Commits
+
+padrão:
+
+tipo(escopo): descrição curta
+
+exemplos:
+
+feat(auth): add login form <br>
+feat(users): create user CRUD <br>
+fix(auth): correct token validation <br>
+refactor(api): centralize error handler <br>
+docs(readme): update setup instructions <br>
+test(users): add unit tests <br>
+chore(deps): update dependencies <br>
+
+---
+
+## Tipos mais comuns
+
+| tipo | quando usar |
+|------|-------------|
+| feat | nova funcionalidade |
+| fix | correção de bug |
+| refactor | melhoria interna sem alterar comportamento |
+| chore | tarefa técnica |
+| docs | documentação |
+| test | testes |
+| style | formatação |
+| perf | performance |
+| build | build ou dependências |
+| ci | configuração de CI |
+
+---
+
+## Boas mensagens de commit
+
+
+feat(users): add pagination to users table <br>
+fix(auth): prevent login with expired token <br>
+refactor(api): standardize response format <br>
+docs: update architecture section <br>
+
+---
+
+## Checklist antes de abrir PR
+
+- código compila
+- tipagem correta
+- sem any desnecessário
+- sem console.log
+- sem código comentado
+- lint passou
+- testes passaram
+- sem arquivos desnecessários
+
+---
+
+## Template de descrição de PR
+
+implementa criação de usuário
+
+mudanças: <br>
+
+formulário de usuário <br>
+validação com zod <br>
+integração com API <br>
+
+como testar: <br>
