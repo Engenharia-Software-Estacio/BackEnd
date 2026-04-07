@@ -65,13 +65,13 @@ Se aparecer `Hi seu-usuario! You've successfully authenticated`, está tudo cert
 Com a chave SSH configurada, clone o repositório:
 
 ```bash
-git clone git@github.com:usuario/nome-do-repositorio.git
+git clone git@github.com:Engenharia-Software-Estacio/BackEnd.git
 ```
 
 Entre na pasta do backend:
 
 ```bash
-cd nome-do-repositorio/backend
+cd BackEnd/backend
 ```
 
 ---
